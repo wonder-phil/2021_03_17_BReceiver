@@ -2,13 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.pgb.a2021_03_16a_breceiver">
 
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
-    <uses-feature android:name="android.provider.Telephony" />
 
     <application
         android:allowBackup="true"
@@ -32,7 +27,6 @@
             android:name=".MyReceiver"
             android:enabled="true"
             android:exported="true">
-
         </receiver>
     </application>
 

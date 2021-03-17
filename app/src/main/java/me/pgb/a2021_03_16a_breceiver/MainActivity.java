@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         myReceiver = new MyReceiver();
         setUpBroadcastReceiver();
 
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         IntentFilter intentFilter = new IntentFilter();
-
-        //intentFilter.addAction(Telephony.Sms.Intents.RESULT_SMS_HANDLED);
 
         for (int i = 0; i < IntentActionHolder.MyIntents.length; i++) {
             intentFilter.addAction(IntentActionHolder.MyIntents[i]);
