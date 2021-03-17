@@ -14,8 +14,8 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String actionString = intent.getAction();
 
-        String data = intent.getDataString();
+        String data = intent.getStringExtra("me.pgb.a2021_03_16a_breceiver.SEND_MESSAGE");
         Toast.makeText(context, actionString + " : " + data, Toast.LENGTH_LONG).show();
-        Log.i(TAG, "onReceive: " + actionString);
+        Log.i(TAG, "onReceive: " + actionString + " and " + data);
     }
 }

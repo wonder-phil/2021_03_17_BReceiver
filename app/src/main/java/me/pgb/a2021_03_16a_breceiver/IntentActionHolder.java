@@ -12,10 +12,12 @@ public class IntentActionHolder {
             Intent.ACTION_DIAL,
             Intent.ACTION_BOOT_COMPLETED,
             Intent.ACTION_POWER_CONNECTED,
+            Intent.ACTION_POWER_DISCONNECTED,
             Intent.ACTION_SHUTDOWN,
             Intent.ACTION_CAMERA_BUTTON,
             Intent.ACTION_BATTERY_OKAY,
-            Telephony.Sms.Intents.SMS_DELIVER_ACTION
+            Telephony.Sms.Intents.SMS_DELIVER_ACTION,
+            "me.pgb.a2021_03_16a_breceiver.SEND_MESSAGE"
     };
 
 }

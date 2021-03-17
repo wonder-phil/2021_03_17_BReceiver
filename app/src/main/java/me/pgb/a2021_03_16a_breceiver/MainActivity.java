@@ -29,20 +29,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         myReceiver = new MyReceiver();
+        setUpBroadcastReceiver();
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
     }
 
-    @Override
-    public void onStart() {
+    public void setUpBroadcastReceiver() {
         super.onStart();
 
         IntentFilter intentFilter = new IntentFilter();
@@ -51,14 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < IntentActionHolder.MyIntents.length; i++) {
             intentFilter.addAction(IntentActionHolder.MyIntents[i]);
-
             registerReceiver(myReceiver, intentFilter);
         }
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
+    public void onDestroy() {
+        super.onDestroy();
         unregisterReceiver(myReceiver);
     }
 
